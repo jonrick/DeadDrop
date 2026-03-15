@@ -14,6 +14,9 @@ source venv/bin/activate
 # Install python dependencies
 pip install -r requirements.txt
 
-# Start Uvicorn Server setup in the background or foreground
-echo "[*] Starting Uvicorn Server on 0.0.0.0:8000..."
-uvicorn main:app --host 0.0.0.0 --port 8000
+# Make start script executable
+chmod +x start.sh
+
+# Start Uvicorn Server using the new start script
+echo "[*] Setup complete. Launching start.sh..."
+./start.sh
