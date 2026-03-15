@@ -404,7 +404,9 @@
 
         async function updateDashboard() {
             try {
-                const response = await fetch('/api/dashboard_data');
+                // Strip inline credentials to avoid Fetch API TypeError
+                const feedUrl = window.location.origin + '/api/dashboard_data';
+                const response = await fetch(feedUrl);
                 const data = await response.json();
 
                 document.getElementById('agent-count').textContent = data.agent_count;
