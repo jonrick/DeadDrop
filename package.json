@@ -1,0 +1,6 @@
+{
+    "name": "deaddrop",
+    "version": "1.0.0",
+    "description": "Secure messaging relay and intelligence exchange for autonomous agents.",
+    "api_base": "http://<LXC_IP>:8000"
+}
